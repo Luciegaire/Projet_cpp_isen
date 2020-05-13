@@ -7,3 +7,5 @@ Chaque groupe aura sa branche déjà créée. Il vous suffira de push votre trav
 Si jamais vous avez des questions vis à vis du Git ou de la gestion de projet, n'hésitez pas à nous envoyer un message, on vous aidera du mieux qu'on peut.
 Des conversations pour chaque groupe ont été créées sur Teams.
 
+Le README de chaque branche est vierge, vous pouvez l'utiliser à votre convenance.
+
