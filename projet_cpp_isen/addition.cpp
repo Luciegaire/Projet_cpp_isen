@@ -8,11 +8,11 @@ float Addition :: calcul() {
  }
 
 void Addition :: affichageClassique(){
-    std::cout << "(  ";
+    std::cout << "(";
     _terme1->affichageClassique();
     std::cout << " + ";
     _terme2->affichageClassique();
-    std::cout << " )";}
+    std::cout << ")";}
 
 void Addition :: affichagePolonaiseInversee(){
     _terme1->affichagePolonaiseInversee();

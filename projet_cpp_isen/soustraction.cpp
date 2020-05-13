@@ -9,11 +9,11 @@ float Soustraction :: calcul() {
  }
 
 void Soustraction :: affichageClassique(){
-    std::cout << "(  ";
+    std::cout << "(";
     _terme1->affichageClassique();
     std::cout << " - ";
     _terme2->affichageClassique();
-    std::cout << " )";}
+    std::cout << ")";}
 
 void Soustraction :: affichagePolonaiseInversee(){
     _terme1->affichagePolonaiseInversee();

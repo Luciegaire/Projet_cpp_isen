@@ -8,11 +8,11 @@ float Division :: calcul() {
  }
 
 void Division :: affichageClassique(){
-    std::cout << "(  ";
+    std::cout << "(";
     _terme1->affichageClassique();
     std::cout << " / ";
     _terme2->affichageClassique();
-    std::cout << " )";}
+    std::cout << ")";}
 
 void Division :: affichagePolonaiseInversee(){
     _terme1->affichagePolonaiseInversee();
