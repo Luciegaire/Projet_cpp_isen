@@ -1,8 +1,5 @@
 #include "division.h"
 
-#include <iostream>
-using namespace std;
-
 Division::Division(Expression *_terme1, Expression *_terme2) :
     Operation(_terme1, _terme2)  {}
 
