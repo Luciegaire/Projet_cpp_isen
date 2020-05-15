@@ -16,20 +16,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         addition.cpp \
-        carre.cpp \
         constante.cpp \
         division.cpp \
-        inverse.cpp \
-        logneperien.cpp \
         main.cpp \
         multiplication.cpp \
         operation.cpp \
-        operationunaire.cpp \
-        oppose.cpp \
-        puissance.cpp \
-        racinecarre.cpp \
-        soustraction.cpp \
-        valeurabsolue.cpp
+        soustraction.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -39,16 +31,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     Expression.h \
     addition.h \
-    carre.h \
     constante.h \
     division.h \
-    inverse.h \
-    logneperien.h \
     multiplication.h \
     operation.h \
-    operationunaire.h \
-    oppose.h \
-    puissance.h \
-    racinecarre.h \
-    soustraction.h \
-    valeurabsolue.h
+    soustraction.h
