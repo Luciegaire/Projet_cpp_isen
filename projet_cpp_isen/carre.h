@@ -1,11 +1,15 @@
 #ifndef CARE_H
 #define CARE_H
+#include "operationunaire.h"
 
-
-class Care : public OperationUnaire
+class Carre : public OperationUnaire
 {
+
 public:
-    Care();
+    Carre(Expression *_terme);
+    float calcul();
+    void affichageClassique();
+    void affichagePolonaiseInversee();
 };
 
 #endif // CARE_H

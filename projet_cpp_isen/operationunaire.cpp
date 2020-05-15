@@ -1,6 +1,6 @@
-#include "operationsunaires.h"
+#include "operationunaire.h"
 
-OperationsUnaires::OperationsUnaires()
+OperationUnaire::OperationUnaire(Expression* a)
 {
-
+    _terme = a;
 }

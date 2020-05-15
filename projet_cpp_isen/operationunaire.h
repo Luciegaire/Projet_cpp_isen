@@ -1,11 +1,17 @@
 #ifndef OPERATIONSUNAIRES_H
 #define OPERATIONSUNAIRES_H
 
+#include "Expression.h"
+#include <cmath>
 
-class OperationsUnaires
+class OperationUnaire: public Expression
 {
+protected:
+    Expression* _terme;
+
+
 public:
-    OperationsUnaires();
+    OperationUnaire(Expression* a);
 };
 
 #endif // OPERATIONSUNAIRES_H
