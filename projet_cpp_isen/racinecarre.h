@@ -3,10 +3,10 @@
 
 #include "operationunaire.h"
 
-class RacineCaree : public OperationUnaire
+class RacineCarre : public OperationUnaire
 {
 public:
-    RacineCaree(Expression *_terme);
+    RacineCarre(Expression *_terme);
     float calcul();
     void affichageClassique();
     void affichagePolonaiseInversee();
