@@ -38,7 +38,7 @@ Window::Window(QWidget *parent) : QWidget(parent)
     valid->setFont(QFont("Arial", 10, QFont::Bold));
     valid->setGeometry(250, 165, 100, 30);
 
-    // Pour associer le bouton quitter au fait de valider la saisie
+    // Pour associer le bouton valider au fait de valider la saisie
     connect(valid, SIGNAL(clicked()), this, SLOT(valider()));
 
     // Resultat
@@ -55,9 +55,12 @@ Window::Window(QWidget *parent) : QWidget(parent)
 }
 
 void Window::valider() {
+    // Récupération du contenu des champs
     QString strChamp1 = _champ1->toPlainText();
     QString strChamp2 = _champ2->toPlainText();
-    if (!strChamp1.isNull() && !strChamp2.isNull()){
+    
+    if (!strChamp1.isNull() && !strChamp2.isNull() && strChamp1.toFloat() && strChamp2.toFloat()){
+        // Création de deux constantes pour l'addition simple
         Constante *c1 = new Constante(strChamp1.toFloat());
         Constante *c2 = new Constante(strChamp2.toFloat());
         _addition = new Addition(c1, c2);
@@ -85,6 +88,8 @@ void Window::valider() {
         polonaise->setAlignment(Qt::AlignHCenter);
         polonaise->setGeometry(0, 285, 600, 30);
     }
+    
+    // On efface le contenu des champs
     _champ1->clear();
     _champ2->clear();
 }
