@@ -28,15 +28,17 @@ Window::Window(QWidget *parent) : QWidget(parent)
         QPushButton *suivant = new QPushButton(tr("Suivant"), this);
         suivant->setFont(QFont("Arial", 10, QFont::Bold));
         suivant->setGeometry(250, 150, 100, 30);
+    
+        // Pour associer le bouton suivant au fait de vouleur faire une nouvelle saisie
+        connect(suivant, SIGNAL(clicked()), this, SLOT(suivante()));
 
         // Bouton valider pour valider la saisie
         QPushButton *valid = new QPushButton(tr("Valider"), this);
         valid->setFont(QFont("Arial", 10, QFont::Bold));
         valid->setGeometry(250, 200, 100, 30);
 
-        // Pour associer le bouton quitter au fait de valider la saisie
+        // Pour associer le bouton valider au fait de valider la saisie totale
         connect(valid, SIGNAL(clicked()), this, SLOT(valider()));
-        connect(suivant, SIGNAL(clicked()), this, SLOT(suivante()));
 
         // Resultat
         resultat = new QLabel(this);
