@@ -18,6 +18,7 @@ SOURCES += \
         addition.cpp \
         constante.cpp \
         division.cpp \
+        interactionutilisateur.cpp \
         main.cpp \
         multiplication.cpp \
         operation.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     addition.h \
     constante.h \
     division.h \
+    interactionutilisateur.h \
     multiplication.h \
     operation.h \
     soustraction.h
