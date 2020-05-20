@@ -1,15 +1,26 @@
 #ifndef SOUSTRACTION_H
 #define SOUSTRACTION_H
 
-#include "operation.h"
+#include <Operations.h>
 
-class Soustraction : Operation
+
+class Soustraction : public Operations
 {
-public:
-    Soustraction(Expression *_terme1, Expression *_terme2);
-    float calcul();
-    void affichageClassique();
-    void affichagePolonaiseInversee();
+    public:
+        Soustraction();
+        Soustraction(Expression *a, Expression *b);
+        float calcul();
+        Expression * simplifier();
+        void affichageClassique();
+        void affichagePolonaiseInversee();
+        virtual ~Soustraction();
+        bool isConstante();
+
+    protected:
+
+    private:
+        Expression* _terme1;
+        Expression* _terme2;
 };
 
 #endif // SOUSTRACTION_H

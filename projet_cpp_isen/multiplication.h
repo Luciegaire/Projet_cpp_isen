@@ -1,15 +1,26 @@
 #ifndef MULTIPLICATION_H
 #define MULTIPLICATION_H
 
-#include "operation.h"
+#include <Operations.h>
 
-class Multiplication : Operation
+
+class Multiplication : public Operations
 {
-public:
-    Multiplication(Expression *_terme1, Expression *_terme2);
-    float calcul();
-    void affichageClassique();
-    void affichagePolonaiseInversee();
+    public:
+        Multiplication();
+        Multiplication(Expression* a, Expression* b);
+        float calcul();
+        Expression * simplifier();
+        bool isConstante();
+        void affichageClassique();
+        void affichagePolonaiseInversee();
+        virtual ~Multiplication();
+
+    protected:
+
+    private:
+        Expression* _terme1;
+        Expression* _terme2;
 };
 
 #endif // MULTIPLICATION_H
