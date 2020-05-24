@@ -8,6 +8,8 @@ class Multiplication : Operation
 public:
     Multiplication(Expression *_terme1, Expression *_terme2);
     float calcul();
+    Expression * simplifier();
+    bool isConstante();
     void affichageClassique();
     void affichagePolonaiseInversee();
 };

@@ -9,6 +9,8 @@ class Addition : Operation
 public:
     Addition(Expression *_terme1, Expression *_terme2);
     float calcul();
+    bool isConstante();
+    Expression* simplifier();
     void affichageClassique();
     void affichagePolonaiseInversee();
 

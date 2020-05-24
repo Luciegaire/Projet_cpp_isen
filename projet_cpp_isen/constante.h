@@ -10,6 +10,8 @@ private:
 public:
     Constante(float val);
     float calcul();
+    bool isConstante();
+    Expression* simplifier();
     void affichageClassique();
     void affichagePolonaiseInversee();
 };
