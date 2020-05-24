@@ -1,12 +1,11 @@
-#include <iostream>
 
-#include <Addition.h>
-#include <Division.h>
-#include <Soustraction.h>
-#include <Multiplication.h>
-#include <Constante.h>
-#include <Variable.h>
-#include <Expression.h>
+#include "Addition.h"
+#include "Division.h"
+#include "Soustraction.h"
+#include "Multiplication.h"
+#include "Constante.h"
+#include "Variable.h"
+#include "Expression.h"
 
 using namespace std;
 
@@ -55,7 +54,7 @@ int main()
     Soustraction sous = Soustraction(&add, &div);
     Multiplication mult = Multiplication(&sous, &add);
 
-    mult.simplifier()->affichageClassique();cout <<endl;
+    mult.simplifier()->affichageClassique();
 
 
 
