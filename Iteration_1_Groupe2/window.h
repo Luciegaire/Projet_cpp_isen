@@ -8,8 +8,12 @@
 #include <QLabel>
 #include <QTextEdit>
 #include <QString>
-#include "Constante.h"
+#include <QList>
+#include "Division.h"
 #include "Addition.h"
+#include "Soustraction.h"
+#include "Multiplication.h"
+#include "Constante.h"
 
 class Window : public QWidget
 {
@@ -20,14 +24,14 @@ public:
 
 private slots:
     void valider();
+    void suivante();
 
 private:
     QLabel *resultat;
     QLabel *classique;
     QLabel *polonaise;
-    QTextEdit *_champ1;
-    QTextEdit *_champ2;
-    Addition *_addition;
+    QTextEdit *_champ;
+    QList<QString> _elements;
 
 signals:
 
