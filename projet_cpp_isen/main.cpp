@@ -5,16 +5,17 @@
 #include "soustraction.h"
 #include "multiplication.h"
 #include "division.h"
+#include "interactionutilisateur.h"
 #include "iostream"
 using namespace std;
 
-
 int main(int argc, char *argv[])
 {
+
     // creation application
     QCoreApplication a(argc, argv);
 
-
+/*
     // test affichage CONSTANTE
     cout << "creation premiere constante: ";
     Constante b(10);
@@ -88,7 +89,17 @@ int main(int argc, char *argv[])
     cout << "affichage classique : ";
     cout << g.calcul() << endl;
     cout << endl;
+*/
 
+    cout << "--------TEST INTERACTION UTILISATEUR--------" << endl;
+    InteractionUtilisateur* inter = new InteractionUtilisateur();
+    Expression* expression = inter->getExpression();
+    cout << "Affichage Polonaise Inversee :";
+    expression->affichagePolonaiseInversee();
+    cout << endl << "Affichage Classique :";
+    expression->affichageClassique();
+    cout << endl << "Resultat :" << expression->calcul() << endl;
+    cout << "---------FIN DU TEST-----------" << endl;
 
     // exécution application
     return a.exec();
